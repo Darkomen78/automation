@@ -153,11 +153,11 @@
 										<key>GID</key>
 										<integer>0</integer>
 										<key>PATH</key>
-										<string>Source/Library/LaunchAgents/com.mine.toggleairport.plist</string>
+										<string>Source/Library/LaunchAgents/com.infernobox.airporttoggle.plist</string>
 										<key>PATH_TYPE</key>
 										<integer>1</integer>
 										<key>PERMISSIONS</key>
-										<integer>493</integer>
+										<integer>420</integer>
 										<key>TYPE</key>
 										<integer>3</integer>
 										<key>UID</key>
@@ -314,7 +314,7 @@
 										<key>GID</key>
 										<integer>0</integer>
 										<key>PATH</key>
-										<string>Source/Library/Scripts/toggleAirport.sh</string>
+										<string>Source/Library/Scripts/AirportToggle.sh</string>
 										<key>PATH_TYPE</key>
 										<integer>1</integer>
 										<key>PERMISSIONS</key>
@@ -502,11 +502,11 @@
 			<key>CONCLUSION_ACTION</key>
 			<integer>2</integer>
 			<key>IDENTIFIER</key>
-			<string>fr.cz.AirportToggle</string>
+			<string>com.infernobox.airporttoggle</string>
 			<key>OVERWRITE_PERMISSIONS</key>
 			<true/>
 			<key>VERSION</key>
-			<string>1.0</string>
+			<string>1.1</string>
 		</dict>
 		<key>PROJECT_COMMENTS</key>
 		<dict>

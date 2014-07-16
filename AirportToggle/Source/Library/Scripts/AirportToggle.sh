@@ -64,9 +64,11 @@ if [ "$prev_eth_status" != "$eth_status" ]; then
     if [ "$eth_status" = "On" ]; then
 	set_airport "Off"
 	growl "Wired network detected. Turning AirPort off."
+#   osascript -e 'display notification "Wired network detected. Turning AirPort off." with title "AiportToggle"'
     else
 	set_airport "On"
 	growl "No wired network detected. Turning AirPort on."
+#   osascript -e 'display notification "No wired network detected. Turning AirPort on." with title "AiportToggle"'
     fi
 
 # If ethernet did not change
@@ -79,7 +81,9 @@ else
 
 	if [ "$air_status" = "On" ]; then
 	    growl "AirPort manually turned on."
+#       osascript -e 'display notification "AirPort manually turned on." with title "AiportToggle"'
 	else
+#       osascript -e 'display notification "AirPort manually turned off." with title "AiportToggle"'
 	    growl "AirPort manually turned off."
 	fi
 

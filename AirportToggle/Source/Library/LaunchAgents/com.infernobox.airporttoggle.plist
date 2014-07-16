@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.asb.toggleairport</string>
+  <string>com.infernobox.airporttoggle</string>
   <key>OnDemand</key>
   <true/>
   <key>ProgramArguments</key>
   <array>
-    <string>/Library/Scripts/toggleAirport.sh</string>
+    <string>/Library/Scripts/AirportToggle.sh</string>
   </array>
   <key>WatchPaths</key>
   <array>
