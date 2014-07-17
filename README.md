@@ -1,4 +1,4 @@
 automation
 ==========
 
-Help tools and process for OSX Admin
+Scripts, LaunchAgents, Automator, Packages, DeployStudio Presets and other stuff for OSX Administrator
