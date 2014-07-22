@@ -1,14 +1,19 @@
 #!/bin/bash
 
+# Find Ethernet and Airport real interface number
+
+ETHINT=$(system_profiler SPNetworkDataType | grep -i -A 1 'Hardware\: Ethernet' | grep en | awk -F " : " '{printf $NF}' | grep -o "[^ ]*$")
+AIRINT=$(system_profiler SPNetworkDataType | grep -i -A 1 'Hardware\: Airport' | awk -F " : " '{printf $NF}' | grep -o "[^ ]*$")
+
 function set_airport {
 
     new_status=$1
 
     if [ $new_status = "On" ]; then
-	/usr/sbin/networksetup -setairportpower en1 on
+	/usr/sbin/networksetup -setairportpower $AIRINT on
 	touch /var/tmp/prev_air_on
     else
-	/usr/sbin/networksetup -setairportpower en1 off
+	/usr/sbin/networksetup -setairportpower $AIRINT off
 	if [ -f "/var/tmp/prev_air_on" ]; then
 	    rm /var/tmp/prev_air_on
 	fi
@@ -44,12 +49,12 @@ if [ -f "/var/tmp/prev_air_on" ]; then
 fi
 
 # Check actual current ethernet status
-if [ "`ifconfig en0 | grep \"status: active\"`" != "" ]; then
+if [ "`ifconfig $ETHINT | grep \"status: active\"`" != "" ]; then
     eth_status="On"
 fi
 
 # And actual current AirPort status
-air_status=`/usr/sbin/networksetup -getairportpower en1 | awk '{ print $4 }'`
+air_status=`/usr/sbin/networksetup -getairportpower $AIRINT | awk '{ print $4 }'`
 
 # If any change has occured. Run external script (if it exists)
 if [ "$prev_air_status" != "$air_status" ] || [ "$prev_eth_status" != "$eth_status" ]; then
