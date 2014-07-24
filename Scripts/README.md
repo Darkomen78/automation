@@ -21,3 +21,9 @@ Launch the "MetaSkip" automator app at first login and delete "/Users/$USER/Libr
 • SSH_ARD_Admin.sh
 
 Remove all users and groups from SSH and ARD access and add only user specified in line 6 (default : admin)
+
+
+• revision.sh
+
+Show "initial today" date on the login screen in Day-Month-Year style.
+Usefull to keep initial deployement date on computer. Best use in a DeployStudio workflow after a fresh restore.
