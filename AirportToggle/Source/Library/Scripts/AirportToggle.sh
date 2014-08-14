@@ -2,8 +2,8 @@
 
 # Find Ethernet and Airport real interface number
 
-ETHINT=$(system_profiler SPNetworkDataType | grep -i -A 1 'Hardware\: Ethernet' | grep en | awk -F " : " '{printf $NF}' | grep -o "[^ ]*$")
-AIRINT=$(system_profiler SPNetworkDataType | grep -i -A 1 'Hardware\: Airport' | awk -F " : " '{printf $NF}' | grep -o "[^ ]*$")
+ETHINT=$(system_profiler SPNetworkDataType | awk -F': ' '/Hardware: Ethernet/{getline;print $2}')
+AIRINT=$(system_profiler SPNetworkDataType | awk -F': ' '/Hardware: Air[pP]ort/{getline;print $2}')
 
 function set_airport {
 
