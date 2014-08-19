@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>381</string>
+	<key>AMApplicationVersion</key>
+	<string>2.4</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>affirmativeTitle</key>
+					<dict/>
+					<key>displayWarning</key>
+					<dict/>
+					<key>explanationText</key>
+					<dict/>
+					<key>negativeTitle</key>
+					<dict/>
+					<key>questionText</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Toutes les applications vont être fermées</string>
+						</array>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Ask for Confirmation.action</string>
+				<key>ActionName</key>
+				<string>Demander une confirmation</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>affirmativeTitle</key>
+					<string>OK</string>
+					<key>displayWarning</key>
+					<true/>
+					<key>explanationText</key>
+					<string>MetaSkip va configurer la session avec les réglages par défauts du modèle Administrateur.
+</string>
+					<key>negativeTitle</key>
+					<string>Annuler</string>
+					<key>questionText</key>
+					<string>Toutes les applications vont être fermées</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Ask for Confirmation</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>AMAskForConfirmationAction</string>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>DB3CF3E5-AE82-47DA-8F2C-C0A5461BC9EC</string>
+				<key>Keywords</key>
+				<array>
+					<string>Message</string>
+					<string>Demander</string>
+					<string>Affichage</string>
+					<string>Invite</string>
+					<string>Afficher</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>06546C3B-51C9-43B9-BBFC-F8E9A6E8995F</string>
+				<key>UUID</key>
+				<string>01A1D8EA-FAD5-4361-B5C5-148F74880505</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>questionText</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>displayWarning</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>explanationText</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string>OK</string>
+						<key>name</key>
+						<string>affirmativeTitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>Annuler</string>
+						<key>name</key>
+						<string>negativeTitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>519.500000:877.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Ask for Confirmation.action/Contents/Resources/French.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>appException</key>
+					<dict/>
+					<key>fileNames</key>
+					<dict/>
+					<key>saveChanges</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Quit All Applications.action</string>
+				<key>ActionName</key>
+				<string>Quitter toutes les applications</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>appException</key>
+					<false/>
+					<key>fileNames</key>
+					<array/>
+					<key>saveChanges</key>
+					<false/>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Quit_All_Applications</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>AMQuitAllApplicationsAction</string>
+				<key>InputUUID</key>
+				<string>03E5DDA9-2286-4D81-B92D-45AE568135AE</string>
+				<key>Keywords</key>
+				<array>
+					<string>Quitter</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>663F0FA1-8227-415F-B633-716F46A90D58</string>
+				<key>UUID</key>
+				<string>721C32E0-DDF4-4B69-9C69-708764D152EF</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>appException</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<array/>
+						<key>name</key>
+						<string>fileNames</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<true/>
+						<key>name</key>
+						<string>saveChanges</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>519.500000:680.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Quit All Applications.action/Contents/Resources/French.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.3</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<dict/>
+					<key>CheckedForUserDefaultShell</key>
+					<dict/>
+					<key>inputMethod</key>
+					<dict/>
+					<key>shell</key>
+					<dict/>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
+				<key>ActionName</key>
+				<string>Exécuter un script Shell</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<string>#!/usr/bin/env bash
+
+# Tweak System
+
+# Délais pour le sauveur d’écran en secondes
+defaults -currentHost write com.apple.screensaver idleTime 1200  
+
+# Désactive la réouverture des applications après l’exctinction
+
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+
+# Supprimer l'icone TimeMachine de la barre de menu
+#defaults write ~/Library/Preferences/ByHost/com.apple.systemuiserver.* dontAutoLoad -array "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
+
+# Afficher la durée et non le pourcentage de batterie
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowTime -string "YES"
+
+# Toujours montrer les barres de défilements
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
+# Agrandir les dialogues de sauvegarde
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Agrandir les dialogues d'impression
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Sauvegarder par défaut sur le disque local (et non iCloud)
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Désactiver le message d'alerte à la première ouverte d'une application
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Désactiver le Crash Reporter 
+defaults write com.apple.CrashReporter DialogType -string "none"
+
+# Tweak Souris - Trackpad
+
+# Désactiver le "défilement naturel"
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Désactiver la "pression maintenue" pour les lettres accentuées
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Tweak Finder
+
+# Les fenêtres du Finder affiche le dossier utilisateur par défaut
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
+# Activer toutes les icones sur le bureau
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Afficher toutes les extensions 
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Afficher la barre d'état
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# La recherche ce fait dans le dossier courant par défaut
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Désactiver l'avertissement lors du changement d'une extensions
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Empêche la création de .DS_Store sur les volumes réseaux
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Affiche le dossier Bibliothèque de l'utilisateur
+chflags nohidden ~/Library
+
+# Affiche les onglets “General”, “Ouvrir avec”, et “Permissions” dans les fenêtres d'info
+defaults write com.apple.finder FXInfoPanesExpanded -dict \
+	General -bool true \
+	OpenWith -bool true \
+	Privileges -bool true
+
+# Aligne par défaut les icones sur une grille
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist	
+# Utiliser la vue en colonne
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+
+# Tweak Dock et Mission control
+
+# Affiche l'indicateur d'application ouverte
+defaults write com.apple.dock show-process-indicators -bool true
+
+# Vide tout le dock
+defaults write com.apple.dock persistent-apps -array ""
+
+# Ajoute les éléments communs dans le dock
+
+# Applications
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications/Safari.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications/Firefox.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications/Google Chrome.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications/Utilities/Console.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications/Utilities/Terminal.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications/Utilities/Activity Monitor.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications/Utilities/Migration Assistant.app&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications/Utilities/Keychain Access.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications//Utilities/Disk Utility.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Applications//Utilities/Managed Software Update.app/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;'
+
+# Autres, dossiers, alias, documents
+# Options : 
+# displayas = 0 pile, 1 dossier
+# showas = 0 auto, 1 éventail, 2 grille, 3 liste 
+
+/usr/bin/defaults write com.apple.dock 'persistent-others' -array-add "&lt;dict&gt;&lt;key&gt;tile-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;arrangement&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;key&gt;displayas&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;file-data&lt;/key&gt;&lt;dict&gt;&lt;key&gt;_CFURLString&lt;/key&gt;&lt;string&gt;/Users/Shared/Serveurs/&lt;/string&gt;&lt;key&gt;_CFURLStringType&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;&lt;/dict&gt;&lt;key&gt;preferreditemsize&lt;/key&gt;&lt;integer&gt;-1&lt;/integer&gt;&lt;key&gt;showas&lt;/key&gt;&lt;integer&gt;3&lt;/integer&gt;&lt;/dict&gt;&lt;key&gt;tile-type&lt;/key&gt;&lt;string&gt;directory-tile&lt;/string&gt;&lt;/dict&gt;"
+
+# Désactiver le Dashboard
+# defaults write com.apple.dashboard mcx-disabled -bool true
+
+# Les applications masquées sont transparentes 
+defaults write com.apple.dock showhidden -bool true
+
+# Ne pas réarranger les espaces automatiquement
+defaults write com.apple.dock mru-spaces -bool false
+
+# Tweak Time Machine
+
+# Désactiver la demande automatique de TimeMachine
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# Limiter la taille de la sauvegarde en MB
+# defaults write /Library/Preferences/com.apple.TimeMachine MaxSize 405600
+
+# Tweak Safari
+
+# Page de démarrage Google
+defaults write com.apple.Safari HomePage -string "https://www.google.fr"
+
+# Ne pas ouvrir les fichiers téléchargés automatiquement
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# Activer le menu developpeur 
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Tweak Mail
+
+# Le raccourcis command + entrée permet d'envoyer le mail
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
+
+# Simplifie le copier coller d'adresse
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+# Tweak Moniteur d'activité
+
+# Affiche tous les processus
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# Tweak Gatekeeper
+
+# Autoriser n'importe où
+spctl --master-disable
+
+# Tweak Session
+
+# première ouverture 
+defaults write ~/Library/Preferences/com.apple.SetupAssistant DidSeeCloudSetup -bool TRUE
+defaults write ~/Library/Preferences/com.apple.SetupAssistant LastSeenCloudProductVersion "10.8"
+defaults write ~/Library/Preferences/com.apple.SetupAssistant GestureMovieSeen none
+
+# Relance les éléments système
+# killall “Finder” &gt; /dev/null 2&gt;&amp;1
+# killall “Dock” &gt; /dev/null 2&gt;&amp;1
+# killall “SystemUIServer” &gt; /dev/null 2&gt;&amp;1
+# killall "cfprefsd" &gt; /dev/null 2&gt;&amp;1
+
+exit 0
+</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
+					<integer>0</integer>
+					<key>shell</key>
+					<string>/bin/bash</string>
+					<key>source</key>
+					<string></string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.RunShellScript</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.3</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunShellScriptAction</string>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>BD6A04B0-E642-4D08-995B-557E4CCD289C</string>
+				<key>Keywords</key>
+				<array>
+					<string>Shell</string>
+					<string>Script</string>
+					<string>Commande</string>
+					<string>Exécuter</string>
+					<string>Unix</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>4ABCCD8E-861B-44F0-A1BA-B6464709B2E3</string>
+				<key>ShowWhenRun</key>
+				<false/>
+				<key>UUID</key>
+				<string>0DCDB25D-B870-40CF-BDD7-B03AE64848CB</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>inputMethod</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>CheckedForUserDefaultShell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>COMMAND_STRING</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>/bin/sh</string>
+						<key>name</key>
+						<string>shell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>519.500000:638.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/French.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>affirmativeTitle</key>
+					<dict/>
+					<key>displayWarning</key>
+					<dict/>
+					<key>explanationText</key>
+					<dict/>
+					<key>negativeTitle</key>
+					<dict/>
+					<key>questionText</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Redémarrage</string>
+						</array>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Ask for Confirmation.action</string>
+				<key>ActionName</key>
+				<string>Demander une confirmation</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>affirmativeTitle</key>
+					<string>OK</string>
+					<key>displayWarning</key>
+					<false/>
+					<key>explanationText</key>
+					<string>L’ordinateur va être redémarré pour valider les réglages de la session Administrateur.</string>
+					<key>negativeTitle</key>
+					<string>Annuler</string>
+					<key>questionText</key>
+					<string>Redémarrage</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Ask for Confirmation</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>AMAskForConfirmationAction</string>
+				<key>InputUUID</key>
+				<string>270B05E7-DA1B-4612-828A-07BEB216FDD4</string>
+				<key>Keywords</key>
+				<array>
+					<string>Message</string>
+					<string>Demander</string>
+					<string>Affichage</string>
+					<string>Invite</string>
+					<string>Afficher</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>E788A4A6-F415-4C8C-9479-E96BA64DB678</string>
+				<key>UUID</key>
+				<string>8A7CBBE8-EF5F-43D1-9EF0-BB25E76FA9B1</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>questionText</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>displayWarning</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>explanationText</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string>OK</string>
+						<key>name</key>
+						<string>affirmativeTitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>Annuler</string>
+						<key>name</key>
+						<string>negativeTitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>519.500000:455.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Ask for Confirmation.action/Contents/Resources/French.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Exécuter un script AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>tell application "Finder" to restart</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>82112929-7B10-457D-9B5D-2A2E113B4CD2</string>
+				<key>Keywords</key>
+				<array>
+					<string>Exécuter</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>189B3DFA-EE58-4101-9903-D71AE7AB1317</string>
+				<key>UUID</key>
+				<string>BA994C20-8BB6-4FBA-8475-941930890E6F</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>519.500000:258.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/French.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>561ED0BB-A84F-4474-ACBF-C387DFF243A9</key>
+		<dict>
+			<key>from</key>
+			<string>0DCDB25D-B870-40CF-BDD7-B03AE64848CB - 0DCDB25D-B870-40CF-BDD7-B03AE64848CB</string>
+			<key>to</key>
+			<string>8A7CBBE8-EF5F-43D1-9EF0-BB25E76FA9B1 - 8A7CBBE8-EF5F-43D1-9EF0-BB25E76FA9B1</string>
+		</dict>
+		<key>56FFA4BA-BA66-4601-BA9B-69D4D4CB0665</key>
+		<dict>
+			<key>from</key>
+			<string>8A7CBBE8-EF5F-43D1-9EF0-BB25E76FA9B1 - 8A7CBBE8-EF5F-43D1-9EF0-BB25E76FA9B1</string>
+			<key>to</key>
+			<string>BA994C20-8BB6-4FBA-8475-941930890E6F - BA994C20-8BB6-4FBA-8475-941930890E6F</string>
+		</dict>
+		<key>A83467E7-A1D2-4CA1-A880-19D4E404F756</key>
+		<dict>
+			<key>from</key>
+			<string>721C32E0-DDF4-4B69-9C69-708764D152EF - 721C32E0-DDF4-4B69-9C69-708764D152EF</string>
+			<key>to</key>
+			<string>0DCDB25D-B870-40CF-BDD7-B03AE64848CB - 0DCDB25D-B870-40CF-BDD7-B03AE64848CB</string>
+		</dict>
+		<key>B8092A91-0490-42DE-B578-FDA339AFD1DC</key>
+		<dict>
+			<key>from</key>
+			<string>01A1D8EA-FAD5-4361-B5C5-148F74880505 - 01A1D8EA-FAD5-4361-B5C5-148F74880505</string>
+			<key>to</key>
+			<string>721C32E0-DDF4-4B69-9C69-708764D152EF - 721C32E0-DDF4-4B69-9C69-708764D152EF</string>
+		</dict>
+	</dict>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>
