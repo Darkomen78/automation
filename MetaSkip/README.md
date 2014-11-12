@@ -1,9 +1,11 @@
 # MetaSkip
 ***
 
+## NEW full bash verion coming up !
+
 * MetaSkip.workflow and MetaSkip_Admin.workflow
 
-Example workflow automator to edit several settings of user and adminstrator session
+Example workflow automator to edit several settings of user and administrator session
 
 * firstrun.sh
 
@@ -12,6 +14,7 @@ Launch the "MetaSkip" automator app (or MetaSkip_Admin for the IT local admin) a
 
 * com.infernobox.firstrun.plist
 
-Place this file in **/System/Library/User Template/Non_localized/Library/LaunchAgents/** (chmod 644 / chown root:wheel)
+Place this file in **/System/Library/User Template/Lang.lproj/Library/LaunchAgents/** 
+*chown root:wheel and chmod 644*
 Launch the "firstrun.sh" script locate in the **/Applications/Utilities/IT** folder
 

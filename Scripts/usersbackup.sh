@@ -1,35 +1,89 @@
 #!/bin/sh
 
+# Users folder backup script for DeployStudio
+# Version 1.1 by Sylvain La Gravière
+# Twitter : @darkomen78
+# Mail : darkomen@me.com
+
 BACKUPDST=${DS_REPOSITORY_PATH}/rbackup/
 BACKUPFOLDER=$BACKUPDST${DS_HOSTNAME}
 
+if [[ -z "${DS_HOSTNAME}" ]]; then 
+BACKUPFOLDER=$BACKUPDST${DS_SERIAL_NUMBER}
+fi
 
-#######################
-###### EDIT THIS ######
-#######################
+#############################
+### Edit that if you want ###
+#############################
 
-# change 'OSX' by your system volume name, (Apple Default : 'Macintosh HD')
-VOLSYSNAME='OSX'
+# Short name of the local admin account to exclude from backup
+ADMUSR=admin
 
-# Add files and/or folders to exclude them (Leave "" )
-EXCLUDE=( "'*.log'" "'*Caches*'" )
+# Add file or folder pattern to eclude of the save, first line for data in /Users/*folders/files*, next line for local account : shortname*
+BAKEXCLUDE=( "*Caches*" "*Trash*" )
+USREXCLUDE=( "_*" "$ADMUSR*" "daemon*" "nobody*" "root*" )
 
-##########################################
-###### DO NOT EDIT UNDER THAT LINE #######
-##########################################
+############################################
+### Don't touch anything under that line ###
+############################################
 
-# Create temporary file to list exclude items
-for excludeitems in "${EXCLUDE[@]}"; do
-	echo "$excludeitems" >> /tmp/usrbakexcludelist
+
+# Determine working directory
+POPUP=`dirname "$0"`/cocoaDialog.app/Contents/MacOS/cocoaDialog
+# Options for cocoaDialog
+RUNMODE="dropdown"
+TITLE="Sauvegarde du dossier Utilisateurs"
+TEXT="Selectionner votre volume de démarrage :"
+OTHEROPTS="--float --string-output --height 150 --width 400"
+ITEMS=( /Volumes/*/ )
+ICON="home"
+
+#Do the dialog, get the result and strip the Ok button code
+RESPONSE=`$POPUP $RUNMODE --button1 "Ok" --button2 "Annuler" $OTHEROPTS  --icon $ICON --title "${TITLE}" --text "${TEXT}" --items "${ITEMS[@]}"`
+if [[ $RESPONSE == Annuler* ]]; then
+	echo "Backup canceled"
+	exit 0
+fi
+RESPONSE=`echo $RESPONSE | sed 's/Ok //g'`
+
+# Create a temporary file to exclude items
+for bakexcludeitems in "${BAKEXCLUDE[@]}"; do
+	echo "$bakexcludeitems" >> /tmp/bakexcludelist
 done
 
+# Create a temporary file to exclude users
+for usrexcludeitems in "${USREXCLUDE[@]}"; do
+	echo "$usrexcludeitems" >> /tmp/usrexcludelist
+done
+
+# Remove local admin folder
+rm -Rf "$RESPONSE"/Users/"$ADMUSR"
+
 # Create rBackup in the DeployStudio repository
-[ ! -d $BACKUPDST ] && { mkdir $BACKUPDST; chmod -R 750 $BACKUPDST; sleep 5; echo "rBackup Folder created"; }
+[ ! -d $BACKUPFOLDER/Localnode ] && { mkdir -p -m 770 "$BACKUPFOLDER/Localnode"; echo "Backup Folder created"; sleep 2; }
 
-/usr/bin/rsync -rlptDzHhblP --backup-dir=OldBackup --exclude-from /tmp/usrbakexcludelist /Volumes/"$VOLSYSNAME"/Users/ $BACKUPFOLDER
+if [ -d $BACKUPFOLDER ]; then
+echo "All seems good, the backup folder was created."
+exit 0
+else
+echo "RuntimeAbortWorkflow: WARNING ! I can't create the backup folder."
+exit 1
+fi
 
-[ -d $BACKUPFOLDER ] && echo "All seems good, the backup folder was created." & exit 0
-[ -d $BACKUPFOLDER ] || echo "RuntimeAbortWorkflow: WARNING ! Can't found the backup folder." & exit 1
+# Copy dslocal users node
+/usr/bin/rsync -rlpPvtDhHblW --inplace --exclude-from=/tmp/usrexcludelist "$RESPONSE"/var/db/dslocal/nodes/Default/users/* $BACKUPFOLDER/Localnode/
+for locanodeuser in $BACKUPFOLDER/Localnode/*
+do
+echo "$localnodeuser local node copied"
+done
 
-# Delete temporary file
-rm /tmp/usrbakexcludelist
+# Copy user home folder
+/usr/bin/rsync -rlpPvtDhHblW --inplace --backup-dir=OldBackup --exclude-from=/tmp/bakexcludelist "$RESPONSE"/Users $BACKUPFOLDER | `dirname "$0"`/rsync-progress.sh
+for localdatauser in $BACKUPFOLDER/Users/*
+do
+echo "$localdatauser data copied"
+done
+
+# Remove temporary files
+rm /tmp/bakexcludelist
+rm /tmp/usrexcludelist

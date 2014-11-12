@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.infernobox.airporttoggle</string>
+  <string>com.infernobox.wifitoggle</string>
   <key>OnDemand</key>
   <true/>
   <key>ProgramArguments</key>
   <array>
-    <string>/Library/Scripts/AirportToggle.sh</string>
+    <string>/Library/Scripts/Wifitoggle.sh</string>
   </array>
   <key>WatchPaths</key>
   <array>
