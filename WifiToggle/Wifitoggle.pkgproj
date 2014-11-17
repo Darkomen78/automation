@@ -146,6 +146,22 @@
 							</dict>
 							<dict>
 								<key>CHILDREN</key>
+								<array/>
+								<key>GID</key>
+								<integer>0</integer>
+								<key>PATH</key>
+								<string>LaunchAgents</string>
+								<key>PATH_TYPE</key>
+								<integer>0</integer>
+								<key>PERMISSIONS</key>
+								<integer>493</integer>
+								<key>TYPE</key>
+								<integer>1</integer>
+								<key>UID</key>
+								<integer>0</integer>
+							</dict>
+							<dict>
+								<key>CHILDREN</key>
 								<array>
 									<dict>
 										<key>CHILDREN</key>
@@ -164,22 +180,6 @@
 										<integer>0</integer>
 									</dict>
 								</array>
-								<key>GID</key>
-								<integer>0</integer>
-								<key>PATH</key>
-								<string>LaunchAgents</string>
-								<key>PATH_TYPE</key>
-								<integer>0</integer>
-								<key>PERMISSIONS</key>
-								<integer>493</integer>
-								<key>TYPE</key>
-								<integer>1</integer>
-								<key>UID</key>
-								<integer>0</integer>
-							</dict>
-							<dict>
-								<key>CHILDREN</key>
-								<array/>
 								<key>GID</key>
 								<integer>0</integer>
 								<key>PATH</key>
@@ -489,9 +489,17 @@
 		<key>PACKAGE_SCRIPTS</key>
 		<dict>
 			<key>POSTINSTALL_PATH</key>
-			<dict/>
+			<dict>
+				<key>PATH_TYPE</key>
+				<integer>1</integer>
+			</dict>
 			<key>PREINSTALL_PATH</key>
-			<dict/>
+			<dict>
+				<key>PATH</key>
+				<string>Source/Library/Scripts/preinstall</string>
+				<key>PATH_TYPE</key>
+				<integer>1</integer>
+			</dict>
 			<key>RESOURCES</key>
 			<array/>
 		</dict>
@@ -506,7 +514,7 @@
 			<key>OVERWRITE_PERMISSIONS</key>
 			<false/>
 			<key>VERSION</key>
-			<string>1.0</string>
+			<string>1.1</string>
 		</dict>
 		<key>PROJECT_COMMENTS</key>
 		<dict>
