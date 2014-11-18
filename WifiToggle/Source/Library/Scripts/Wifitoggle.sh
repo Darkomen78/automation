@@ -5,14 +5,14 @@
 
 # Determine interface number
 # for all ethernet interface
-for i in $(networksetup -listallhardwareports | grep -A1 '[E-e]thernet' | grep en | grep -o "[^ ]*$")
+for i in $(networksetup -listallhardwareports | grep -A1 -i 'ethernet' | grep en | grep -o "[^ ]*$")
 do
 if [ "`ifconfig $i | grep \"status: active\"`" != "" ]; then 
 ETHINT=$i
 fi
 done
 # for Wi-Fi
-AIRINT=$(networksetup -listallhardwareports | grep -A1 '[W-w]i-Fi\|[A-a]irport' | grep en | grep -o "[^ ]*$")
+AIRINT=$(networksetup -listallhardwareports | grep -A1 -i 'wi-fi\|airport' | grep en | grep -o "[^ ]*$")
 
 function set_airport {
 
