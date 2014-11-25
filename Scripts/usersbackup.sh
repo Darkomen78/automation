@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Users folder backup script for DeployStudio
-# Version 1.1 by Sylvain La Gravière
+# Version 1.1b by Sylvain La Gravière
 # Twitter : @darkomen78
 # Mail : darkomen@me.com
 
@@ -64,7 +64,6 @@ rm -Rf "$RESPONSE"/Users/"$ADMUSR"
 
 if [ -d $BACKUPFOLDER ]; then
 echo "All seems good, the backup folder was created."
-exit 0
 else
 echo "RuntimeAbortWorkflow: WARNING ! I can't create the backup folder."
 exit 1
@@ -87,3 +86,5 @@ done
 # Remove temporary files
 rm /tmp/bakexcludelist
 rm /tmp/usrexcludelist
+
+exit 0
