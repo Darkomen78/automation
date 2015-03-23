@@ -1,8 +1,6 @@
 # MetaSkip
 ***
 
-## NEW full bash verion coming up !
-
 * MetaSkip.workflow and MetaSkip_Admin.workflow
 
 Example workflow automator to edit several settings of user and administrator session
