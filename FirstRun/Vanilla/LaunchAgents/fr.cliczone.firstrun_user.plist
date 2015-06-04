@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>fr.cliczone.firstrun_user</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Applications/Utilities/Cliczone/firstrun_user.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>LaunchOnlyOnce</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/dev/null</string>
+	<key>StandardOutPath</key>
+	<string>/dev/null</string>
+	<key>TimeOut</key>
+	<integer>10</integer>
+</dict>
+</plist>
