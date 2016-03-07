@@ -42,4 +42,5 @@ UPCOMNAME="$(echo $LOWCOMNAME | /usr/bin/tr '[:lower:]' '[:upper:]')"
 [ "$LOCANAME" != "$UPCOMNAME" ] && /usr/sbin/scutil --set LocalHostName $UPCOMNAME && echo "New LocalHostName is $UPCOMNAME"
 [ "$SHORTNAME" != "$LOWCOMNAME" ] && /usr/sbin/scutil --set HostName $LOWCOMNAME.$DOMAIN && echo "New HostName is $LOWCOMNAME.$DOMAIN"
 fi
-
+sleep 15
+exit 0

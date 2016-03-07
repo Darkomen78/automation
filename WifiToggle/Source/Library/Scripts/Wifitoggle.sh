@@ -93,4 +93,5 @@ else
         rm /var/tmp/prev_eth_on
     fi
 fi
+sleep 15
 exit 0
