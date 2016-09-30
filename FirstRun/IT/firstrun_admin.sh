@@ -1,243 +1,233 @@
 #!/bin/bash
 
-# Version 1.0 by Sylvain La Gravière
+# Version 2.0 First Run Admin
+# Creator : Sylvain La Gravière
 # Twitter : @darkomen78
 # Mail : darkomen@me.com
 
+# Supprime les LaunchAgents
+rm -f ~/Library/LaunchAgents/com.infernobox.firstrun*
+# Emplacement du dossiers IT
+ITFOLDER="/Applications/Utilities/IT"
+
+if [ "$USER" = "adminit" ]; then
+	WALLPAPERFILE="$ITFOLDER/wallpaper.jpg"
+elif [ "$USER" = "adminuser" ]; then
+	WALLPAPERFILE="/Users/Shared/login.png"
+else
+	exit 0
+fi
+# Emplacement des fichiers partagés
+LOGINWALL="/Users/Shared/login.png"
+USERPICFILE="/Users/Shared/admin.tif"
+# Configuration HomePage Safari
+SAFARIHOMEPAGE='http://munki'
+
+# Menu Rapide Utilisateur (YES ou NO )
+SWITCHUSER='YES'
+
 FULLOSVERSION=$(sw_vers -productVersion)
 
-WALLPAPERFILE=/Applications/Utilities/IT/wallpaper.jpg
-# USERPICFILE=/Users/Shared/user.tif
-ITFOLDER=/Applications/Utilities/IT
-ADMINUSR=admin
+osascript -e 'display notification "Configuration de la session administrateur en cours..." with title "First Run Admin"'
+sleep 5
 
-SAFARIHOMEPAGE='http://munki.infernobox.com'
-# Fastswitch user menu (YES ou NO )
-SWITCHUSER='NO'
-
-# Delete launch file
-rm -f ~/Library/LaunchAgents/com.infernobox.firstrun_admin.plist
-
-if [ "$USER" = "cliczone" ]; then
-####################################	
-#### ADMIN SETTINGS SCRIPT BEGIN ####
-####################################
-####################################
-####################################
-
-osascript -e 'display notification "Please wait, settings in progress..."'
-say "Please wait, settings in progress..."
-sleep 15
+# Liste des apps à mettre dans le Dock
+DOCKAPPS=('Safari.app' 'Firefox.app' 'Google Chrome.app' 'Utilities/Console.app' 'Utilities/Terminal.app' 'Utilities/Activity Monitor.app' 'Utilities/Migration Assistant.app' 'Utilities/Keychain Access.app' 'Utilities/Disk Utility.app' 'System Preferences.app' 'Managed Software Center.app')
 
 # Tweak System
 
-# Fastswitch user menu
+# Active le menu permutation rapide d’utilisateur
 defaults write NSGlobalDomain MultipleSessionEnabled -bool $SWITCHUSER
 
-# Screensaver
-## Main delay
+# Délais pour le sauveur d’écran en secondes
 defaults -currentHost write com.apple.screensaver idleTime 600
-## Ask for password
 defaults write com.apple.screensaver askForPassword -int 1
-## Password delay
-defaults write com.apple.screensaver askForPasswordDelay -int 600
+defaults write com.apple.screensaver askForPasswordDelay -int 5
 
-# Remove "Reopen windows on next login"
+# Désactive la réouverture des applications après l’exctinction
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
-# Remove TimeMachine from menu
+# Supprimer l'icone TimeMachine de la barre de menu
 defaults -currentHost write com.apple.systemuiserver dontAutoLoad -array-add "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
 defaults -currentHost write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu" "/System/Library/CoreServices/Menu Extras/TextInput.menu"
 
-# Show battery time
+# Afficher la durée et non le pourcentage de batterie
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
-# Always show scrollbars
+# Toujours montrer les barres de défilements
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
-# Big save dialogs
+# Agrandir les dialogues de sauvegarde
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
-# Big print dialogs
+# Agrandir les dialogues d'impression
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
-# Local save (instead of iCloud save)
+# Sauvegarder par défaut sur le disque local (et non iCloud)
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-# Remove first app open alert popup
+# Désactiver le message d'alerte à la première ouverte d'une application
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Remove Crash Reporter 
+# Désactiver le Crash Reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
-# Tweak Mouse - Trackpad
+# Tweak Souris - Trackpad
 
-# Natural scroll off
+# Désactiver le "défilement naturel"
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-# Press and Hold for accented characters
+# Désactiver la "pression maintenue" pour les lettres accentuées
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Tweak Finder
 
-# Home folder on Finder new window
+# Les fenêtres du Finder affiche le dossier utilisateur par défaut
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
-# All icons on desktop
+# Activer toutes les icones sur le bureau
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
-# Show all extensions
+# Afficher toutes les extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Show status bar
+# Afficher la barre d'état
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# Search in current folder
+# La recherche ce fait dans le dossier courant par défaut
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Désactiver l'avertissement lors du changement d'une extensions
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# No more .DS_Store on network volumes
+# Empêche la création de .DS_Store sur les volumes réseaux
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Show user's library
+# Affiche le dossier Bibliothèque de l'utilisateur
 chflags nohidden ~/Library
 
-# General, Open with, Sharing and Permissions expanded in Info Windows
+# Affiche les onglets “General”, “Ouvrir avec”, et “Permissions” dans les fenêtres d'info
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
-	General -bool true \
-	OpenWith -bool true \
-	Privileges -bool true
+General -bool true \
+OpenWith -bool true \
+Privileges -bool true
 
-# Snap to grid
+# Aligne par défaut les icones sur une grille
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist	
-# Always use column view
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+# Utiliser la vue en colonne
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-# Tweak Dock and Mission control
-
-# Show open app indicator
+#####################################
+### Tweak Dock et Mission control ###
+#####################################
+# Désactiver le Dashboard
+# defaults write com.apple.dashboard mcx-disabled -bool true
+# Les applications masquées sont transparentes
+defaults write com.apple.dock showhidden -bool true
+# Ne pas réarranger les espaces automatiquement
+defaults write com.apple.dock mru-spaces -bool false
+# Affiche l'indicateur d'application ouverte
 defaults write com.apple.dock show-process-indicators -bool true
-
-# Empty Dock
+# Vide tout le dock
 /usr/bin/defaults write com.apple.dock 'persistent-apps' -array " "
+# Ajout des Applications dans le Dock
+ROOTAPPS="/Applications/"
+for ADDAPP in "${DOCKAPPS[@]}"
+do
+	if [ -d "$ROOTAPPS$ADDAPP" ]; then
+		/usr/bin/defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$ROOTAPPS$ADDAPP</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+	fi
+done
+# Ajout des autres éléments dans le Dokc
+# Dossiers, alias, documents
+# Options : displayas = 0 pile, 1 dossier / showas = 0 auto, 1 éventail, 2 grille, 3 liste
+/usr/bin/defaults write com.apple.dock 'persistent-others' -array-add '<dict><key>tile-data</key><dict><key>arrangement</key><integer>0</integer><key>displayas</key><integer>0</integer><key>file-data</key><dict><key>_CFURLString</key><string>/Users/Shared/Serveurs/</string><key>_CFURLStringType</key><integer>0</integer></dict><key>preferreditemsize</key><integer>-1</integer><key>showas</key><integer>0</integer></dict><key>tile-type</key><string>directory-tile</string></dict>'
+/usr/bin/defaults write com.apple.dock 'persistent-others' -array-add '<dict><key>tile-data</key><dict><key>arrangement</key><integer>0</integer><key>displayas</key><integer>0</integer><key>file-data</key><dict><key>_CFURLString</key><string>'"$ITFOLDER"'</string><key>_CFURLStringType</key><integer>0</integer></dict><key>preferreditemsize</key><integer>-1</integer><key>showas</key><integer>0</integer></dict><key>tile-type</key><string>directory-tile</string></dict>'
 
-# Add items in dock
-
-# Applications
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Safari.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Firefox.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Utilities/Console.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Utilities/Terminal.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Utilities/Activity Monitor.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Utilities/Migration Assistant.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Utilities/Keychain Access.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Utilities/Disk Utility.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-/usr/bin/defaults write com.apple.dock 'persistent-apps' -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Managed Software Center.app/</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-
-# Autres, folder, alias, documents
-# Options : 
-# displayas = 0 stack, 1 folder
-# showas = 0 auto, 1 éventail, 2 grille, 3 list 
-
-/usr/bin/defaults write com.apple.dock 'persistent-others' -array-add "<dict><key>tile-data</key><dict><key>arrangement</key><integer>0</integer><key>displayas</key><integer>1</integer><key>file-data</key><dict><key>_CFURLString</key><string>/Users/Shared/Serveurs/</string><key>_CFURLStringType</key><integer>0</integer></dict><key>preferreditemsize</key><integer>-1</integer><key>showas</key><integer>3</integer></dict><key>tile-type</key><string>directory-tile</string></dict>"
-/usr/bin/defaults write com.apple.dock 'persistent-others' -array-add "<dict><key>tile-data</key><dict><key>arrangement</key><integer>0</integer><key>displayas</key><integer>0</integer><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Utilities/Cliczone/</string><key>_CFURLStringType</key><integer>0</integer></dict><key>preferreditemsize</key><integer>-1</integer><key>showas</key><integer>3</integer></dict><key>tile-type</key><string>directory-tile</string></dict>"
-
-# Put Dashboard off
+# Désactiver le Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
-# Hidden apps icons in dock are transparent
+# Les applications masquées sont transparentes
 defaults write com.apple.dock showhidden -bool true
 
-# Don't rearrange spaces
+# Ne pas réarranger les espaces automatiquement
 defaults write com.apple.dock mru-spaces -bool false
 
 # Tweak Time Machine
 
-# no more auto ask for TimeMachine when you mount external disk
+# Désactiver la demande automatique de TimeMachine
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Tweak Safari
 
-# Safari home page
+# Page de démarrage Google
 defaults write com.apple.Safari HomePage -string "$SAFARIHOMEPAGE"
 
-# Don't open downloaded files
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+# Ne pas ouvrir les fichiers téléchargés automatiquement
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool true
 
-# Safari Dev/Debug menu
-# defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-# defaults write com.apple.Safari IncludeDevelopMenu -bool true
-# defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-# defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+# Activer le menu developpeur
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Tweak Mail
 
-# command + enter send mail
+# Le raccourcis command + entrée permet d'envoyer le mail
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
 
-# Copy/Paste adress
+# Simplifie le copier coller d'adresse
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
-# Tweak Activity Monitor
+# Tweak Moniteur d'activité
 
-# Show all process
+# Affiche tous les processus
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
 # Tweak Gatekeeper
 
-# Allow anywhere
+# Autoriser n'importe où
 spctl --master-disable
 
-# Tweak first login
+# Désactiver la réactivation automatique (30 jours)
+sudo defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool NO
+
+# Tweak première ouverture de session
 defaults write ~/Library/Preferences/com.apple.SetupAssistant DidSeeCloudSetup -bool TRUE
 defaults write ~/Library/Preferences/com.apple.SetupAssistant LastSeenCloudProductVersion "$FULLOSVERSION"
 defaults write ~/Library/Preferences/com.apple.SetupAssistant GestureMovieSeen none
 
-# Change user picture
+# Changement de l’image
+
 dscl . delete /Users/$USER Picture
 dscl . delete /Users/$USER JPEGPhoto
-dscl . append /Users/$USER Picture $USERPICFILE
+dscl . append $HOME Picture $USERPICFILE
 
-# Change user wallpaper
-if [ -f $ITFOLDER/set_desktops.py ]; then
+# Changement du fond d'écran
 python $ITFOLDER/set_desktops.py --path $WALLPAPERFILE
-fi
 
-# Check munki on first logoff
-touch /Users/Shared/.com.googlecode.munki.checkandinstallatstartup
-
-# Teak Contacts
-
-# Add LDAP server
-# /usr/bin/defaults write com.apple.AddressBook 'AB3LDAPServers' -array-add '<dict><key>ServerInfo</key><dict><key>AuthenticationType</key><false/><key>Base</key><string>dc=infernobox,dc=com</string><key>Disabled</key><false/><key>Enabled</key><true/><key>HostName</key><string>ldap.inernobox.com</string><key>IgnoresSSLCertErrorsIdentifier</key><false/><key>Port</key><integer>389</integer><key>SSL</key><false/><key>Scope</key><integer>2</integer><key>Title</key><string>LDAP Infernobox</string><key>UID</key><string>5FEF20A9-8D82-48F7-8C8B-31C27586E2AC</string></dict><key>ServerType</key><integer>0</integer></dict>'
-# /usr/bin/defaults write com.apple.AddressBook "ABCleanWindowController-MainCleanWindow-groupList" '<dict><key>selectedGroupEntryIdentifier</key><string>ABSearchingGroupEntry:5FEF20A9-8D82-48F7-8C8B-31C27586E2AC</string></dict>'
-
-# Restart Dock, Finder and logout
+# Relance du Dock et du Finder pour prise en compte des nouveaux réglages
 killall Dock
 killall Finder
+sleep 3
+
+# Changement du fond de login El Capitan
+LOGINFILE="/Library/Caches/com.apple.desktop.admin.png"
+if [ -f $LOGINFILE ]; then
+	rm -f $LOGINFILE
+fi
+cp $LOGINWALL $LOGINFILE
 
 ####################################
 ####################################
@@ -245,9 +235,9 @@ killall Finder
 ##### ADMIN SETTINGS SCRIPT END #####
 ####################################
 osascript <<EOD
-	tell application "System Events"
-		log out
-	end tell
+tell application "System Events"
+log out
+end tell
 EOD
-fi
+
 exit 0
