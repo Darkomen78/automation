@@ -2,12 +2,12 @@ No DEP no MDM starter Kit
 ==========
 ### Custom tools and script to make a "not so bad" automatic 10.14 install on T2 (or not) devices without DEP nor MDM (but please, listen Apple and get an MDM).
 
-Example in motion : [macOS 10.14 Mojave automatic install on T2 device]: https://www.youtube.com/watch?v=xFASDulnU48
+Example in motion : [macOS 10.14 Mojave automatic install on T2 device](https://www.youtube.com/watch?v=xFASDulnU48)
 
 * The "For MDS" folder
 Scripts are based on MDS variables but you can adjust them with other tools, I guess...
 Profiles can be used anywhere, they complete general user/computer configuration of the configuration.sh script.
-If you don't know MDS take a look [here]: https://twocanoes.com/products/mac/mac-deploy-stick/ and [here]: https://bitbucket.org/twocanoes/macdeploystick/downloads/
+If you don't know MDS take a look [here](https://twocanoes.com/products/mac/mac-deploy-stick/) and [here]( https://bitbucket.org/twocanoes/macdeploystick/downloads/)
 
 * The "For Webserver" folder
 custom.tar is just a TAR-file version of the "custom items" folder's content.
@@ -17,7 +17,7 @@ com.github.darkomen78.kickstart.plist is a launchagent used only once at the fir
 In my design, all content of this folder must go into /User/Shared/ to be used by scripts.
   * users_pics and wallpaper folders speak for themselves.
   * The IT folder got three sub-folders :
-    * bin for the active part, [pycreateuserpkg]: https://github.com/gregneagle/pycreateuserpkg is a really good tool by Greg Neagle and [wallpaper]: https://github.com/sindresorhus/macos-wallpaper/releases by sindresorhus
+    * bin for the active part, [pycreateuserpkg](https://github.com/gregneagle/pycreateuserpkg) is a really good tool by Greg Neagle and [wallpaper](https://github.com/sindresorhus/macos-wallpaper/releases by sindresorhus)
     * kickstart.sh just launch admin.command (and show progress window) for the local admin user only or user.sh script for all others users
     * scripts folder with the two script admin.command and user.sh, check them and modify script to meet your needs.   
       * admin.command is well commented. It launch after the first (auto)login of the local admin user and do this :
