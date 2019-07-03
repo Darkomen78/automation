@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>EmailAccountDescription</key>
+			<string>thisUSER@maildomain.com</string>
+			<key>EmailAccountName</key>
+			<string>thisLONGUSER</string>
+			<key>EmailAccountType</key>
+			<string>EmailTypeIMAP</string>
+			<key>EmailAddress</key>
+			<string>thisUSER@maildomain.com</string>
+			<key>IncomingMailServerAuthentication</key>
+			<string>EmailAuthPassword</string>
+			<key>IncomingMailServerHostName</key>
+			<string>mail.maildomain.com</string>
+			<key>IncomingMailServerPortNumber</key>
+			<integer>993</integer>
+			<key>IncomingMailServerUseSSL</key>
+			<true/>
+			<key>IncomingMailServerUsername</key>
+			<string>thisUSER@maildomain.com</string>
+			<key>IncomingPassword</key>
+			<string>thisPASS</string>
+			<key>OutgoingMailServerAuthentication</key>
+			<string>EmailAuthPassword</string>
+			<key>OutgoingMailServerHostName</key>
+			<string>mail.maildomain.com</string>
+			<key>OutgoingMailServerPortNumber</key>
+			<integer>587</integer>
+			<key>OutgoingMailServerUseSSL</key>
+			<true/>
+			<key>OutgoingMailServerUsername</key>
+			<string>thisUSER@maildomain.com</string>
+			<key>OutgoingPassword</key>
+			<string>thisPASS</string>
+			<key>OutgoingPasswordSameAsIncomingPassword</key>
+			<false/>
+			<key>PayloadDescription</key>
+			<string></string>
+			<key>PayloadDisplayName</key>
+			<string>Mail IMAP thisUSER</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.mail.managed.DF8B486B-C5D6-4544-9FC8-5B7D89F81475</string>
+			<key>PayloadType</key>
+			<string>com.apple.mail.managed</string>
+			<key>PayloadUUID</key>
+			<string>DF8B486B-C5D6-4544-9FC8-5B7D89F81475</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SMIMEEnablePerMessageSwitch</key>
+			<false/>
+			<key>SMIMEEnabled</key>
+			<false/>
+			<key>SMIMEEncryptionEnabled</key>
+			<false/>
+			<key>SMIMESigningEnabled</key>
+			<false/>
+			<key>allowMailDrop</key>
+			<false/>
+			<key>disableMailRecentsSyncing</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string></string>
+	<key>PayloadDisplayName</key>
+	<string>Mail IMAP thisUSER</string>
+	<key>PayloadIdentifier</key>
+	<string>com.github.darkomen78.23F74E1A-2120-4B3E-9587-AC2E869A3E33</string>
+	<key>PayloadOrganization</key>
+	<string>Organization</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>086F17C2-67C7-4CDB-B481-ECFE00EEC608</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

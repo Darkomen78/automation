@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# PPDSRC='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/Resources/Generic.ppd'
+
+# Change that variable to the PPD File path
+PPDDEST='/Library/Printers/PPDs/Contents/Resources/en.lproj/Generic.ppd'
+
+# Change that variable to the display name of the printer
+PRINTERNAME='MyGenericPrinter'
+
+# Change that variable to the IP adress of the printer
+PRINTERADDR='lpd://192.168.1.150'
+
+# Change false to true if you want enable sharing on this printer
+SHAREB='false'
+
+
+# Change that variable to set location's printer
+PRNTLOC='MyDesk'
+
+
+# cp "$PPDSRC" "$PPDDEST"
+
+/usr/sbin/lpadmin -E -p $PRINTERNAME -v "$PRINTERADDR" -P "$PPDDEST" -L "PRNTLOC" -o printer-is-shared=$SHAREB && cupsenable $PRINTERNAME && cupsaccept $PRINTERNAME
+
+exit 0
+

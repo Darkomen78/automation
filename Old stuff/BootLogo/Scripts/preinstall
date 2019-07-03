@@ -1,0 +1,9 @@
+#!/bin/sh
+
+LOGOF='/Library/Application Support/BootLogo'
+PLISTF='/Library/Preferences/SystemConfiguration/com.apple.Boot.plist'
+
+ [ -d "$LOGOF" ] && sudo rm -Rf "$LOGOF"
+ [ -f "$PLISTF" ] && sudo rm "$PLISTF"
+
+exit 0

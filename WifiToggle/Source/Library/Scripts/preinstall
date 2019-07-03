@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# uninstall old version
-
-launchctl stop com.infernobox.airporttoggle
-rm -f /Library/Scripts/AirportToggle.sh
-rm -f /Library/LaunchAgents/com.infernobox.airporttoggle.plist
-exit 0

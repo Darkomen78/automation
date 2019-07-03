@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AutoBackup</key>
+			<true/>
+			<key>BackupAllVolumes</key>
+			<false/>
+			<key>BackupDestURL</key>
+			<string>afp://timemachine.infernobox.com/Backups/</string>
+			<key>BackupSizeMB</key>
+			<integer>700000</integer>
+			<key>BackupSkipSys</key>
+			<true/>
+			<key>MobileBackups</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Time Machine</string>
+			<key>PayloadIdentifier</key>
+			<string>com.github.darkomen78.timemachine.714F0BFD-D84F-4C7A-A03A-B4A89C90D282.com.apple.MCX.TimeMachine.4D96B16B-02DC-4028-AF79-9F7D1E5B6AC0</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.MCX.TimeMachine</string>
+			<key>PayloadUUID</key>
+			<string>4D96B16B-02DC-4028-AF79-9F7D1E5B6AC0</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>TimeMachine</string>
+	<key>PayloadIdentifier</key>
+	<string>com.github.darkomen78.timemachine.714F0BFD-D84F-4C7A-A03A-B4A89C90D282</string>
+	<key>PayloadOrganization</key>
+	<string>Organization</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>714F0BFD-D84F-4C7A-A03A-B4A89C90D282</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DSDontWriteNetworkStores</key>
+			<true/>
+			<key>PayloadDescription</key>
+			<string>Configures Desktop Services settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Desktop Services</string>
+			<key>PayloadIdentifier</key>
+			<string>com.github.darkomen78.E118A379-104F-4DB0-A771-16E019442F68.com.apple.ManagedClient.preferences.DDA5A01D-D649-490E-BBD4-00AF0ED9CC09</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.desktopservices</string>
+			<key>PayloadUUID</key>
+			<string>DDA5A01D-D649-490E-BBD4-00AF0ED9CC09</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AppleShowScrollBars</key>
+			<string>Always</string>
+			<key>MultipleSessionEnabled</key>
+			<true/>
+			<key>PayloadDescription</key>
+			<string>Configures Global Preferences settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Global Preferences</string>
+			<key>PayloadIdentifier</key>
+			<string>com.github.darkomen78.E118A379-104F-4DB0-A771-16E019442F68..GlobalPreferences.A35D51E1-34A3-48AF-BD78-35926B40B868</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>.GlobalPreferences</string>
+			<key>PayloadUUID</key>
+			<string>A35D51E1-34A3-48AF-BD78-35926B40B868</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>DoNotOfferNewDisksForBackup</key>
+			<true/>
+			<key>PayloadDescription</key>
+			<string>Configures Time Machine settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Time Machine</string>
+			<key>PayloadIdentifier</key>
+			<string>com.github.darkomen78.E118A379-104F-4DB0-A771-16E019442F68.com.apple.TimeMachine.34B4DD8C-D658-4832-A4CF-D321C873E961</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.TimeMachine</string>
+			<key>PayloadUUID</key>
+			<string>34B4DD8C-D658-4832-A4CF-D321C873E961</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configuration globale</string>
+	<key>PayloadDisplayName</key>
+	<string>Global Preferences</string>
+	<key>PayloadIdentifier</key>
+	<string>com.github.darkomen78.E118A379-104F-4DB0-A771-16E019442F68</string>
+	<key>PayloadOrganization</key>
+	<string>Darkomen78</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>E118A379-104F-4DB0-A771-16E019442F68</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
