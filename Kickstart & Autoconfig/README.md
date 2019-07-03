@@ -13,7 +13,7 @@ If you don't know MDS take a look [here](https://twocanoes.com/products/mac/mac-
 custom.tar is just a TAR-file version of the "custom items" folder's content.
 com.github.darkomen78.kickstart.plist is a launchagent used only once at the first login for each user.
 
-* The "custom items" folder
+* The "custom items" folder  
 In my design, all content of this folder must go into /User/Shared/ to be used by scripts.
   * users_pics and wallpaper folders speak for themselves.
   * The IT folder got three sub-folders :
