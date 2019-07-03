@@ -1,6 +1,6 @@
 No DEP no MDM starter Kit
 ==========
-### All my custom tools and script to make a "not so bad" automatic 10.14 install on T2 devices (or not) without DEP nor MDM (but please, listen Apple and get an MDM).
+### Custom tools and script to make a "not so bad" automatic 10.14 install on T2 (or not) devices without DEP nor MDM (but please, listen Apple and get an MDM).
 
 Example in motion : [macOS 10.14 Mojave automatic install on T2 device]: https://www.youtube.com/watch?v=xFASDulnU48
 
