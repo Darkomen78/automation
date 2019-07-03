@@ -38,8 +38,8 @@ In my design, all content of this folder must go into /User/Shared/ to be used b
 **To suppress the admin autologin after apps deployment** you can use a nopkg script for munki like this :
 
     #!/bin/bash
-defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
-rm /etc/kcpassword
-exit 0
+    defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
+    rm /etc/kcpassword
+    exit 0
 
 Just add it in all deployment manifest (see munkioption)
