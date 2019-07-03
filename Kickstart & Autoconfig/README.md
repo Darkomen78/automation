@@ -17,7 +17,7 @@ com.github.darkomen78.kickstart.plist is a launchagent used only once at the fir
 In my design, all content of this folder must go into /User/Shared/ to be used by scripts.
   * users_pics and wallpaper folders speak for themselves.
   * The IT folder got three sub-folders :
-    * bin for the active part, [pycreateuserpkg](https://github.com/gregneagle/pycreateuserpkg) is a really good tool by Greg Neagle and [wallpaper](https://github.com/sindresorhus/macos-wallpaper/releases by sindresorhus)
+    * bin for the active part, [pycreateuserpkg](https://github.com/gregneagle/pycreateuserpkg) is a really good tool by Greg Neagle and [wallpaper](https://github.com/sindresorhus/macos-wallpaper/releases) by sindresorhus
     * kickstart.sh just launch admin.command (and show progress window) for the local admin user only or user.sh script for all others users
     * scripts folder with the two script admin.command and user.sh, check them and modify script to meet your needs.   
       * admin.command is well commented. It launch after the first (auto)login of the local admin user and do this :
@@ -36,10 +36,10 @@ In my design, all content of this folder must go into /User/Shared/ to be used b
     * ConfigureUser folder help you to configure quickly IMAP mail account, TimeMachine network share and L2TP VPN, all are based on the same shortname as the local user account and password provide by MDS or manually at the beginning of the script. Again, check and modify all three mobileconfig files to meet your needs.   
 
 **To suppress the admin autologin after apps deployment** you can use a nopkg script for munki like this :
-{% highlight bash %}
-#!/bin/bash
+
+    #!/bin/bash
 defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
 rm /etc/kcpassword
 exit 0
-{% endhighlight %}
+
 Just add it in all deployment manifest (see munkioption)
