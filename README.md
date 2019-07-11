@@ -20,3 +20,5 @@ Example workflow :
 9. Local user login (manual)
 10. Local user session configuration (auto)
 11. Local user mail/vpn/timemachine configuratio (semi-auto)
+
+Example in motion : [macOS 10.14 Mojave automatic install on T2 device](https://www.youtube.com/watch?v=xFASDulnU48)
