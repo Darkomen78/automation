@@ -2,8 +2,6 @@ No DEP no MDM starter Kit
 ==========
 ### Custom tools and script to make a "not so bad" automatic 10.14 install on T2 (or not) devices without DEP nor MDM (but please, listen Apple and get an MDM).
 
-Example in motion : [macOS 10.14 Mojave automatic install on T2 device](https://www.youtube.com/watch?v=xFASDulnU48)
-
 * The "For MDS" folder
 Scripts are based on MDS variables but you can adjust them with other tools, I guess...
 Profiles can be used anywhere, they complete general user/computer configuration of the configuration.sh script.
