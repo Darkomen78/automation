@@ -30,7 +30,7 @@ com.github.darkomen78.kickstart.plist is a launchagent used only once at the fir
         3. Configure user wallpaper (silent and not on 10.15 for now)
         4. Make some .afploc files with embedded username on Desktop to quickly connect servers.
         5. Launch configure.command script (with MDS values) of the ConfigureUser folder
-    * ConfigureUser folder help you to configure quickly IMAP mail account, TimeMachine network share and L2TP VPN, all are based on the same shortname as the local user account and password provide by MDS or manually at the beginning of the script. Again, check and modify all three mobileconfig files to meet your needs.   
+    * ConfigureUser folder help you to configure quickly IMAP mail account, TimeMachine network share and L2TP VPN, all are based on the same shortname as the local user account and password provide by MDS or manually at the beginning of the script. Again, check and modify all three mobileconfig files and scrips to meet your needs.   
 
 **To suppress the admin autologin after apps deployment** you can use a nopkg script for munki like this :
 

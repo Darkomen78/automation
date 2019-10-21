@@ -11,8 +11,12 @@ PLBUDDY=/usr/libexec/PlistBuddy
 # Use a simple SMTP relay without authentification
 SMTPRELAY=smtp.infernobox.com:25
 
+# Change default input to french
+LANG="fr"
+REGION="fr_FR"
+
 # Save variables asked in MDS deployement dialog
-mkdir "/Users/Shared/tmp"
+mkdir -m775 "$CUSTOMTMP"
 # QR-Code (TAG)
 echo "$mds_var1" > $CUSTOMTMP/qr_code
 # Munki option : 1 for Office / 2 for Graphist artist
@@ -28,9 +32,6 @@ while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done 2>/dev/null &
 
 /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
-# Change default input to french
-LANG="fr"
-REGION="fr_FR"
 languagesetup -langspec $LANG
 
 defaults delete /Library/Preferences/com.apple.HIToolbox AppleEnabledInputSources

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 06-2019
+# Version 07-2019
 # Creator : Sylvain La Gravière
 # Twitter : @darkomen78
 
@@ -7,7 +7,7 @@ ITFOLDER="/Users/Shared/IT"
 CUSTOMSHARED="/Users/Shared"
 CUSTOMTMP="/Users/Shared/tmp"
 USRFULLNAME=$(cat $CUSTOMTMP/full_username)
-mkdir -p $CUSTOMTMP
+mkdir -p -m775 $CUSTOMTMP
 
 # Local user password
 USRPASSWORD=mylocalpassword

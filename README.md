@@ -3,9 +3,9 @@ automation
 
 Scripts and other stuff for macadmins
 
-Kickstart and autoconfig works better with MDS and Munki but you can adapt them to work with anything. 
+Kickstart and autoconfig works better with MDS and Munki but you can adapt them to work with anything.
 
-General purpose of this repo is to minimize manual action to get a fresh pre-configurate “in a good way” system from scratch. 
+General purpose of this repo is to minimize manual action to get a fresh pre-configurate “in a good way” system from scratch.
 
 Example workflow :
 
@@ -19,6 +19,6 @@ Example workflow :
 8. Admin logout and email “computer ready” sent (auto)
 9. Local user login (manual)
 10. Local user session configuration (auto)
-11. Local user mail/vpn/timemachine configuratio (semi-auto)
+11. Local user mail/vpn/timemachine configuration (semi-auto)
 
 Example in motion : [macOS 10.14 Mojave automatic install on T2 device](https://www.youtube.com/watch?v=xFASDulnU48)

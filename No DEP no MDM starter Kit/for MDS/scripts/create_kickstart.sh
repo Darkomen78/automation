@@ -32,5 +32,5 @@ curl -s "$SRCKICK" > "$DSTKICK"
 curl -s $SRCSRV/custom.tar -o /tmp/custom.tar
 tar -zxvf /tmp/custom.tar -C $CUSTOMSHARED
 rm /tmp/custom.tar
-chown -R admin:staff $CUSTOMSHARED && chmod -R 755 $CUSTOMSHARED*
+chown -R admin:staff $CUSTOMSHARED && chmod -R 775 $CUSTOMSHARED*
 exit 0
